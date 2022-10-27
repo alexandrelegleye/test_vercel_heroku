@@ -8,8 +8,8 @@ import { Plus } from 'react-feather';
 function Settings({
   onLogin,
 }) {
-  const [email, setEmail] = useState('bouclierman@herocorp.io');
-  const [password, setPassword] = useState('jennifer');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleOpen = () => {

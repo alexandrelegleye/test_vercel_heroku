@@ -25,20 +25,25 @@ const port = process.env.PORT || 3001;
 
 const db = {
   users: {
-    'bouclierman@herocorp.io': {
-      password: 'jennifer',
-      username: 'John',
+    'Paul': {
+      password: 'Paul',
+      username: 'Paul',
       color: '#c23616',
     },
-    'acidman@herocorp.io': {
-      password: 'fructis',
-      username: 'Burt',
+    'Nicolas': {
+      password: 'Nicolas',
+      username: 'Nicolas',
       color: '#009432',
     },
-    'captain.sportsextremes@herocorp.io': {
-      password: 'pingpong',
-      username: 'Karin',
+    'Ramses': {
+      password: 'Ramses',
+      username: 'Ramses',
       color: '#f0f',
+    },
+    'Alex': {
+      password: 'Alex',
+      username: 'Alex',
+      color: '#21BA45',
     }
   }
 };

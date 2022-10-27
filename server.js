@@ -25,22 +25,22 @@ const port = process.env.PORT || 3001;
 
 const db = {
   users: {
-    'Paul': {
+    'Paul@idfrog.com': {
       password: 'Paul',
       username: 'Paul',
       color: '#c23616',
     },
-    'Nicolas': {
+    'Nicolas@idfrog.com': {
       password: 'Nicolas',
       username: 'Nicolas',
       color: '#009432',
     },
-    'Ramses': {
+    'Ramses@idfrog.com': {
       password: 'Ramses',
       username: 'Ramses',
       color: '#f0f',
     },
-    'Alex': {
+    'Alex@idfrog.com': {
       password: 'Alex',
       username: 'Alex',
       color: '#21BA45',

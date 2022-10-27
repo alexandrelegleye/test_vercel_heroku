@@ -8,7 +8,7 @@ const socketMiddleware = (store) => (next) => async (action) => {
   switch (action.type) {
     case actionTypeLogin: {
       // des qu'il recoit l'action login, il lance la connection du socket
-      socket = io('http://localhost:3001');
+      socket = io('https://chatroomlegleye.herokuapp.com/');
 
       // le back m'envoie un evenement 'send_message', cela veut dire que quelqu'un a envoyer un message au back
       // (ce quelqu'un ca peut être moi)

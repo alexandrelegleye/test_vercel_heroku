@@ -1,0 +1,70 @@
+@use "src/styles/vars";
+@use "src/styles/animations";
+.settings {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    display: flex;
+    overflow: hidden;
+
+    &-button {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 0;
+        background-color: vars.$light-color;
+        color: vars.$violet;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+            background-color: adjust-color($color: vars.$light-color, $lightness: -10%);
+        }
+
+        &__open {
+            transform: rotate(45deg);
+        }
+    }
+
+    &-form {
+        padding: 0 1rem;
+        animation: slide 0.3s ease-in-out 0s 1;
+    }
+
+    $form-width: 15em;
+    $form-font-size: 1.1em;
+    $form-border-radius: 8px;
+
+    &-input {
+        display: block;
+        width: $form-width;
+        border: 0;
+        border-radius: $form-border-radius;
+        height: 2em;
+        font-size: $form-font-size;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    &-submit {
+        display: block;
+        width: $form-width;
+        border: 0;
+        background-color: vars.$violet;
+        color: vars.$light-color;
+        border-radius: $form-border-radius;
+        font-size: $form-font-size;
+        padding: 0.5rem;
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: darken(vars.$violet, 10%);
+            color: darken(vars.$light-color, 10%);
+        }
+    }
+}

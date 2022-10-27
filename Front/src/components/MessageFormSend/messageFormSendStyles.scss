@@ -1,0 +1,50 @@
+@use "/src/styles/vars";
+@use "src/styles/animations";
+
+.sendMessage {
+    background-color: vars.$light-color;
+    height: 5rem;
+    display: flex;
+    box-shadow: 4px -2px 5px 2px rgba(0, 0, 0, 0.27);
+
+    &-input {
+        border: 0;
+        background: none;
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.5em;
+
+        &:focus {
+            background-color: darken(vars.$light-color, 10%);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: darken(vars.$light-color, 20%);
+        }
+    }
+
+    &-submit {
+        width: 5rem;
+        color: vars.$normal-blue;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 1rem;
+
+        &:hover:not(:disabled) {
+            color: vars.$dark-blue;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: darken(vars.$light-color, 20%);
+        }
+
+        &.is-loading {
+            svg {
+                animation: rotate 2s linear infinite;
+            }
+        }
+    }
+}

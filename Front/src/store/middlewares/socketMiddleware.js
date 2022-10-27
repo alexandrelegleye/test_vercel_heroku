@@ -1,6 +1,9 @@
 import { io } from 'socket.io-client';
 import { actionTypeSendMessage, getActionAddMessage } from '../../actions/chatActions';
 import { actionTypeLogin } from '../../actions/settingsActions';
+import config from '../../constant';
+
+const url = config.url.API_URL;
 
 let socket;
 
@@ -8,7 +11,7 @@ const socketMiddleware = (store) => (next) => async (action) => {
   switch (action.type) {
     case actionTypeLogin: {
       // des qu'il recoit l'action login, il lance la connection du socket
-      socket = io('https://chatroomlegleye.herokuapp.com/');
+      socket = io(url);
 
       // le back m'envoie un evenement 'send_message', cela veut dire que quelqu'un a envoyer un message au back
       // (ce quelqu'un ca peut être moi)

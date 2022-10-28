@@ -1,6 +1,6 @@
 const prod = {
   url: {
-    API_URL: 'https://chatroomlegleye.herokuapp.com',
+    API_URL: 'https://chatroomlegleye-api.herokuapp.com',
   },
 };
 
